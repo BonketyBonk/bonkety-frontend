@@ -1,4 +1,9 @@
 import React from "react";
+import Image from "next/image";
+
+import DoKwonImage from "../public/images/Do_Kwon.jpg";
+import CarolineEllisonImage from "../public/images/Caroline_Ellison.jpg";
+import SBFImage from "../public/images/Sam_Bankman_Fried.jpg";
 
 const ChooseOpponent = () => {
   return (
@@ -12,10 +17,10 @@ const ChooseOpponent = () => {
           <div className="mb-6 lg:mb-0">
             <div className="bg-white block rounded-lg shadow-lg">
               <div className="relative overflow-hidden bg-no-repeat bg-contain">
-                <img
-                  src="https://cryptopotato.com/wp-content/uploads/2022/06/Sam_Bankman-Fried.jpg"
-                  className="w-full rounded-t-lg"
+                <Image
+                  src={SBFImage}
                   alt="Sam Bankman Fried"
+                  className="w-full rounded-t-lg"
                 />
                 <a href="#!">
                   <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
@@ -49,10 +54,10 @@ const ChooseOpponent = () => {
           <div className="mb-6 lg:mb-0">
             <div className="bg-white block rounded-lg shadow-lg">
               <div className="relative overflow-hidden bg-no-repeat bg-contain">
-                <img
-                  src="https://ichef.bbci.co.uk/news/976/cpsprodpb/3A57/production/_126853941_104d47ed-d95d-44aa-97c9-b35e3c5067d4.jpg"
-                  className="w-full rounded-t-lg"
+                <Image
+                  src={DoKwonImage}
                   alt="Do Kwon"
+                  className="w-full rounded-t-lg"
                 />
                 <a href="#!">
                   <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
@@ -88,10 +93,10 @@ const ChooseOpponent = () => {
           <div className="">
             <div className="bg-white block rounded-lg shadow-lg">
               <div className="relative overflow-hidden bg-no-repeat bg-contain">
-                <img
-                  src="https://images.mktw.net/im-684905?width=700&height=487"
-                  class="w-full rounded-t-lg"
+                <Image
+                  src={CarolineEllisonImage}
                   alt="Caroline Ellison"
+                  className="w-full rounded-t-lg"
                 />
                 <a href="#!">
                   <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
