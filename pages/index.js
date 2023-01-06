@@ -1,10 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Navbar from "../components/Navbar";
 import ChooseOpponent from "../components/ChooseOpponent";
 import BetAmount from "../components/BetAmount";
-import Footer from "../components/Footer";
 import Submit from "../components/Submit";
 // import Hero from "../components/Hero";
 // import About from "../components/About";
@@ -14,14 +9,7 @@ import Submit from "../components/Submit";
 
 export default function Home() {
   return (
-    <div class="bg-orange-100">
-      <Head></Head>
-
-      <header>
-        <Navbar />
-      </header>
-
-      <main>
+    <div className="bg-orange-100">
         <ChooseOpponent />
         <BetAmount />
         <Submit />
@@ -29,11 +17,6 @@ export default function Home() {
         <About />
         <Services />
         <Form /> */}
-      </main>
-
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
