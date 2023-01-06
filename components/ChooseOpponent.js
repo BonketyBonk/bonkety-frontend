@@ -1,16 +1,22 @@
 import React from "react";
 import Image from "next/image";
+import useBettingStore from "../lib/zustand/bettingZustand";
 
 import DoKwonImage from "../public/images/Do_Kwon.jpg";
 import CarolineEllisonImage from "../public/images/Caroline_Ellison.jpg";
 import SBFImage from "../public/images/Sam_Bankman_Fried.jpg";
 
 const ChooseOpponent = () => {
+  const betAmount = useBettingStore((state) => state.betAmount);
+  const opponent = useBettingStore((state) => state.bonkAgainst);
+  const pickOpponent = useBettingStore((state) => state.setBonkAgainst);
+
   return (
     <div className="container py-5 px-6 mx-auto">
       <section className="mb-10 text-black-400 text-center">
         <h1 className="text-3xl font-bold mb-12">
-          Choose who to <div className="text-orange-400">BONK</div>
+          Choose who to <div className="text-orange-400">BONK</div> for{" "}
+          {betAmount} against {opponent}
         </h1>
 
         <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
@@ -42,6 +48,7 @@ const ChooseOpponent = () => {
                   10% chance to win 10x your investment{" "}
                 </p>
                 <button
+                  onClick={() => pickOpponent("Sam Bankman Fried")}
                   type="button"
                   class="inline-block px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
@@ -81,6 +88,7 @@ const ChooseOpponent = () => {
                   25% chance to win 4x your investment{" "}
                 </p>
                 <button
+                  onClick={() => pickOpponent("Do Kwon")}
                   type="button"
                   className="inline-block px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
@@ -120,6 +128,7 @@ const ChooseOpponent = () => {
                   50% chance to win 2x your investment{" "}
                 </p>
                 <button
+                  onClick={() => pickOpponent("Caroline Ellison")}
                   type="button"
                   className="inline-block px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
