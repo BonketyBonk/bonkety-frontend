@@ -1,20 +1,26 @@
-import Link from "next/link";
 import React from "react";
-import { FiMenu } from "react-icons/fi";
+import {
+  WalletDisconnectButton,
+  WalletModalProvider,
+  WalletMultiButton,
+} from "@solana/wallet-adapter-react-ui";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 const Navbar = () => {
+  const { publicKey } = useWallet();
+
   return (
-    <nav class="bg-orange-400 px-2 sm:px-4 py-2.5">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <nav className="bg-orange-400 px-2 sm:px-4 py-2.5">
+      <div className="container flex flex-wrap items-center justify-between mx-auto">
         <a href="https://flowbite.com/" class="flex items-center">
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             BONKETY BONK
           </span>
         </a>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-orange-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-orange-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -34,7 +40,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:dark:bg-orange-400">
+          <ul class="flex flex-col items-center	p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:dark:bg-orange-400">
             <li>
               <a
                 href="https://www.bonkcoin.com/"
@@ -71,6 +77,9 @@ const Navbar = () => {
               >
                 BUY $BONK
               </a>
+            </li>
+            <li className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0">
+              {publicKey ? <WalletDisconnectButton /> : <WalletMultiButton />}
             </li>
           </ul>
         </div>
