@@ -9,7 +9,7 @@ import Submit from "../components/Submit";
 
 export default function Home() {
   return (
-    <div className="bg-orange-100">
+    <div>
         <ChooseOpponent />
         <BetAmount />
         <Submit />

@@ -2,7 +2,7 @@ import React from "react";
 
 const Submit = () => {
   return (
-    <div class="container my-5 px-6 mx-auto">
+    <div class="container py-5 px-6 mx-auto">
       <section class="my-10 mb-5 text-gray-800 text-center">
         <button
           type="button"
