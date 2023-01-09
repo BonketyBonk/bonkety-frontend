@@ -2,6 +2,7 @@ import React from "react";
 import useBettingStore from "../lib/zustand/bettingZustand";
 
 const BetAmount = () => {
+  const betAmount = useBettingStore((state) => state.betAmount);
   const setBetAmount = useBettingStore((state) => state.setBetAmount);
   const betAmounts = [1e6, 1.5e6, 5e6, 10e6, 20e6, 30e6];
   const formatter = Intl.NumberFormat("en", {
@@ -12,10 +13,12 @@ const BetAmount = () => {
   return (
     <div class="container my-5 px-6 mx-auto">
       <section class="mb-5 text-gray-800 text-center">
-        <h1 class="text-3xl font-bold mb-12">
-          BET <div class="text-orange-400">AMOUNT</div>
-          <p class="text-xs text-gray-500 mb-4">(Subject to 3.5% fees)</p>
-        </h1>
+        <div class="mb-10 md:mb-16">
+          <h1 class="text-gray-800 text-2xl lg:text-4xl font-bold text-left mb-4 md:mb-6">
+            FOR <h2 class="text-gray-100">{betAmount} $BONK</h2>
+            <p class="text-xs text-gray-100">(Subject to 3% fees)</p>
+          </h1>
+        </div>
         <div class="inline-flex w-full rounded-md shadow-sm" role="group">
           {betAmounts.map((betAmount) => {
             return (
