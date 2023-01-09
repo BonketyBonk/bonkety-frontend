@@ -11,8 +11,8 @@ const ChooseOpponent = () => {
   const pickOpponent = useBettingStore((state) => state.setBonkAgainst);
 
   return (
-    <div>
-      <section>
+    <div class="container my-5 px-6 mx-auto">
+      <section class="mb-5 text-gray-800 text-center">
         <div className="mb-12"></div>
         <div class="py-6 sm:py-8 lg:py-12">
           <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
