@@ -16,16 +16,19 @@ const ChooseOpponent = () => {
         <div className="mb-12"></div>
         <div class="py-6 sm:py-8 lg:py-12">
           <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-            {/* <!-- text - start --> */}
             <div class="mb-10 md:mb-16">
               <h1 class="text-gray-800 text-2xl lg:text-4xl font-bold text-left mb-4 md:mb-6">
-                BONK <h2 class="text-gray-100">{opponent}</h2>
+                BONK{" "}
+                <h2
+                  class={`text-gray-100 ${
+                    opponent ? "" : "opacity-0 select-none"
+                  }`}
+                >
+                  {opponent || "none selected"}
+                </h2>
               </h1>
             </div>
-            {/* <!-- text - end --> */}
-
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-8">
-              {/* <!-- product - start --> */}
               <div>
                 <a
                   href="#"
@@ -60,9 +63,7 @@ const ChooseOpponent = () => {
                   </div>
                 </div>
               </div>
-              {/* <!-- product - end -->
 
-                            {/* <!-- product - start --> */}
               <div>
                 <a
                   href="#"
@@ -97,9 +98,7 @@ const ChooseOpponent = () => {
                   </div>
                 </div>
               </div>
-              {/* <!-- product - end -->
 
-                            {/* <!-- product - start --> */}
               <div>
                 <a
                   href="#"

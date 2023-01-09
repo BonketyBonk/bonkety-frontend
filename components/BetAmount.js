@@ -16,6 +16,7 @@ const BetAmount = () => {
         <div class="mb-10 md:mb-16">
           <h1 class="text-gray-800 text-2xl lg:text-4xl font-bold text-left mb-4 md:mb-6">
             FOR <h2 class="text-gray-100">{betAmount} $BONK</h2>
+            <p class="text-xs text-gray-100">(Subject to 3% fees)</p>
           </h1>
         </div>
         <div class="inline-flex w-full rounded-md shadow-sm" role="group">

@@ -18,12 +18,9 @@ const Navbar = () => {
           </span>
         </a>
         <div class="flex md:order-2">
-          <button
-            type="button"
-            class="bg-orange-400 rounded-lg text-sm text-center"
-          >
+          <li className="block py-2 pl-3 pr-4">
             {publicKey ? <WalletDisconnectButton /> : <WalletMultiButton />}
-          </button>
+          </li>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"

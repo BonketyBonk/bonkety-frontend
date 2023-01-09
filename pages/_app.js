@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
             <Navbar />
           </WalletModalProvider>
         </header>
-        <main className="bg-gradient-to-r from-orange-400 to-rose-400">
+        <main className="bg-gradient-to-r from-orange-400 to-rose-400 mix-blend-overlay">
           <Component {...pageProps} />
         </main>
         <footer class="bg-gray-900">
