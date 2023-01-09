@@ -18,7 +18,7 @@ const Navbar = () => {
           </span>
         </a>
         <div class="flex md:order-2">
-          <li className="block py-2 pl-3 pr-4">
+          <li className="block rounded-md bg-orange-400">
             {publicKey ? <WalletDisconnectButton /> : <WalletMultiButton />}
           </li>
           <button
