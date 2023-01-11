@@ -44,13 +44,11 @@ export default function App({ Component, pageProps }) {
             <Navbar />
           </WalletModalProvider>
         </header>
-        <main className="bg-gradient-to-r from-orange-400 to-rose-400 mix-blend-overlay">
+        <main class="bg-[url('../public/images/Cheems.jpg')]">
           <Component {...pageProps} />
         </main>
-        <footer class="bg-gray-900">
-          <h1 className="text-white text-xl text-left px-32 p-4 font-semibold whitespace-nowrap">
-            25% BURNED, 25% TEAM, 50% NFT HOLDERS
-          </h1>
+        <footer class="bg-gray-900 text-white text-xl">
+          25% BURNED, 25% TEAM, 50% NFT HOLDERS
         </footer>
       </WalletProvider>
     </ConnectionProvider>

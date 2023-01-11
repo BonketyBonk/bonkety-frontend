@@ -11,16 +11,16 @@ const ChooseOpponent = () => {
   const pickOpponent = useBettingStore((state) => state.setBonkAgainst);
 
   return (
-    <div>
-      <section>
+    <div class="container my-5 px-6 mx-auto">
+      <section class="mb-5 text-gray-800 text-center">
         <div className="mb-12"></div>
         <div class="py-6 sm:py-8 lg:py-12">
           <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
             <div class="mb-10 md:mb-16">
-              <h1 class="text-gray-800 text-2xl lg:text-4xl font-bold text-left mb-4 md:mb-6">
+              <h1 class="text-white text-2xl lg:text-4xl font-bold text-left mb-4 md:mb-6">
                 BONK{" "}
                 <h2
-                  class={`text-gray-100 ${
+                  class={`text-orange-100 ${
                     opponent ? "" : "opacity-0 select-none"
                   }`}
                 >
