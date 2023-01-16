@@ -16,11 +16,7 @@ export default function Home() {
       <BetAmount />
       <Submit />
       <Disclaimer />
-      <Result />
-      {/* <Hero />
-        <About />
-        <Services />
-        <Form /> */}
+      {/* <Result /> */}
     </div>
   );
 }
