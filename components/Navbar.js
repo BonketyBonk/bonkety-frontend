@@ -51,7 +51,8 @@ const Navbar = () => {
           <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <a
-                href="#"
+                href="https://www.bonkcoin.com/"
+                target="_blank"
                 class="block py-2 pl-3 pr-4 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0"
               >
                 BONK OFFICIAL
@@ -59,7 +60,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.bonkcoin.com/one-pager"
+                target="_blank"
                 class="block py-2 pl-3 pr-4 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0"
               >
                 ONE PAGER
@@ -67,7 +69,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.bonkcoin.com/integrations"
+                target="_blank"
                 class="block py-2 pl-3 pr-4 text-orange-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0"
               >
                 INTEGRATIONS
@@ -75,7 +78,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="https://jup.ag/swap/SOL-Bonk"
+                target="_blank"
                 class="block py-2 pl-3 pr-4 text-yellow-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-white md:p-0"
               >
                 BUY $BONK
